@@ -1,38 +1,28 @@
-# MedGuardAI — Real-Time Medical IoT, AI Anomaly Detection & Telemedicine Platform
+# MedGuardAI — Medical IoT Capstone Architecture Case Study
 
-> **Licence Graduation Capstone (PFE — USTHB) · Hardware ECG & Blood Glucose Sensors + Raspberry Pi + Python/Flask + Flutter + WebRTC**
+MedGuardAI was a Licence capstone project at USTHB focused on the architecture of a medical-monitoring and telehealth application.
 
-## 1. System Overview
-**MedGuardAI** is an end-to-end connected healthcare ecosystem engineered to bridge **physical biomedical sensors**, **real-time deep learning anomaly detection**, and **clinical telemedicine workflows**.
+> **Repository status:** the public repository currently contains this README only. It does not include the Flutter application, Flask backend, device firmware, database schema, trained-model files, or deployment configuration. The architecture below is a summary of the project scope, not a reproducible deployment package. Any simulated sensor values are demonstrations, not real patient monitoring.
 
-Unlike isolated notebook models, MedGuardAI streams live physiological signals from hardware ECG and blood glucose sensors through a Raspberry Pi edge relay to a Python/Flask inference backend, triggering instant emergency alerts and unlocking WebRTC video consultations between patients and physicians.
+## Project scope
 
----
+The planned/academic system combined:
 
-## 2. End-to-End Architecture
+- ECG and blood-glucose sensor acquisition, with a Raspberry Pi used as an edge relay in the described architecture.
+- A Python/Flask service and MongoDB for application data.
+- Model-based or threshold-based anomaly alerts, depending on the component.
+- Flutter patient/doctor interfaces and a proposed WebRTC telehealth workflow.
 
-```text
-[Physical ECG & Glucose Sensors]
-        │ (Serial / BLE Acquisition)
-        ▼
-[Raspberry Pi Edge Relay] ──► Real-Time Telemetry Stream
-        │
-        ▼
-[Python / Flask Backend + MongoDB]
-  ├─► Deep Learning ECG & Glycemia Anomaly Detection Models (.h5 / Keras)
-  ├─► Multi-Tier Clinical Alert Engine (Critical / Warning / Normal)
-  ├─► Appointment Scheduling & Automated Digital Prescription Generator
-  └─► WebRTC Signaling & Real-Time Chat Server
-        │
-        ▼
-[Cross-Platform Flutter Mobile & Web Dashboards]
-  ├─► Patient App: Live ECG waveform, glucose trendlines, emergency SOS, 1-tap video call
-  └─► Doctor Portal: Multi-patient telemetry monitor, diagnostic history & prescription builder
-```
+These are architecture-level descriptions; this repository itself does not verify that every component was integrated and tested end to end.
 
----
+## Related model repositories
 
-## 3. Related Model Repositories
-- **[Deep Learning ECG Anomaly Detection Model](https://github.com/HANIDEVINF/deep-learning-model-for-anomaly-detection-of-ECG)**
-- **[Deep Learning Blood Glucose Anomaly Detection Model](https://github.com/HANIDEVINF/deep-learning-model-for-anomaly-detection-of-blood-glucose-monitoring)**
-- **[Patient Fall Detection Computer Vision Model](https://github.com/HANIDEVINF/Fall-Detection-Model)**
+- [ECG arrhythmia classification](https://github.com/HANIDEVINF/deep-learning-model-for-anomaly-detection-of-ECG)
+- [Blood-glucose anomaly detection](https://github.com/HANIDEVINF/deep-learning-model-for-anomaly-detection-of-blood-glucose-monitoring)
+- [Fall-detection model](https://github.com/HANIDEVINF/Fall-Detection-Model)
+
+## Reproducibility and safety
+
+There is no single command to run this repository because application source files are not included. A reviewer needs access to the relevant source and hardware setup to verify acquisition, alerting, telemedicine and deployment behavior.
+
+This project is an academic engineering case study and is not a certified medical device. It must not be used for diagnosis, triage, or real patient monitoring.
